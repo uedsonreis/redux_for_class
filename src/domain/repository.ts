@@ -16,7 +16,3 @@ export class Repository {
     }
 
 }
-
-export default (setStore: (store: any) => void) => {
-    return new Repository(setStore);
-}

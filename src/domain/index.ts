@@ -1,9 +1,16 @@
 import { createContext } from "react";
 
-import { initialValues } from "./contact";
-import { State } from "./state";
+import { Contact, initialValues } from "./reducers/contact";
 
-export const AppContext = createContext(new State());
+type State = {
+    store: { contacts: Contact[] },
+    reducers: {
+        addContact: (contact: Contact) => void,
+        deleteContact: (email: string) => void
+    };
+}
+
+export const AppContext = createContext<State>({} as State);
 
 export const initialStore = {
     contacts: initialValues

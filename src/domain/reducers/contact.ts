@@ -1,6 +1,4 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
-
-import { Repository } from '../domain/repository';
+import { Repository } from '../repository';
 
 export type Contact = { name: string, email: string };
 
